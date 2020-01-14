@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".emergencia">
+
+    <TextView
+        android:id="@+id/emocion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#7ea5c9"
+        android:padding="10dp"
+        android:text="Emergencia"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="24dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/tristeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/emocion"
+        android:layout_alignTop="@id/emocion"
+        android:layout_alignBottom="@id/emocion"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        android:src="@drawable/emergencia" />
+
+    <LinearLayout
+        android:id="@+id/gruporai"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emocion"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/rai_feliz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/raiemergencia"/>
+
+        <TextView
+            android:id="@+id/Speech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rai_feliz"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/rai_feliz"
+            android:background="@drawable/speech_bubble"
+            android:lineSpacingExtra="2dp"
+            android:maxWidth="180dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/rai_emergencia_texto"
+            android:textColor="@color/textColor"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/llamar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone"
+        android:layout_below="@id/gruporai"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+
+</RelativeLayout>

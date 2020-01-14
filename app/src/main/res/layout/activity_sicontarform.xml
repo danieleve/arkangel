@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.arkangel.arkangel.sicontarform">
+
+    <TextView
+        android:id="@+id/txtSentimientoSeleccionado"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#7ea5c9"
+        android:padding="10dp"
+        android:text="Me siento triste."
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="24dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/tristeImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/txtSentimientoSeleccionado"
+        android:layout_alignTop="@id/txtSentimientoSeleccionado"
+        android:layout_alignBottom="@id/txtSentimientoSeleccionado"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        android:src="@drawable/triste" />
+
+    <LinearLayout
+        android:id="@+id/gruporai"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSentimientoSeleccionado"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/rai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/raisicontar2"/>
+
+        <TextView
+            android:id="@+id/Speech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rai_feliz"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/rai_feliz"
+            android:background="@drawable/speech_bubble"
+            android:lineSpacingExtra="2dp"
+            android:maxWidth="230dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/rai_sicontar2_texto"
+            android:textColor="@color/textColor"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtInput"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/gruporai"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edittext_bg"
+        android:hint="Escribe aquí tu texto...."
+        android:inputType="textCapSentences|textMultiLine"
+        android:padding="10dip" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtInput"
+        android:layout_centerHorizontal="true"
+        android:background="#1fc768"
+        android:text="ENVIAR"
+        android:layout_marginTop="25sp"
+        android:textColor="@color/textColor" />
+
+
+</RelativeLayout>
