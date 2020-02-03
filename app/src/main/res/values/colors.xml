@@ -3,7 +3,6 @@
     <color name="colorPrimary">#1a70a3</color>
     <color name="colorPrimaryDark">#027fcc</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="fondoDeRai">#494949</color>
     <color name="textColor">#fff</color>
     <color name="speech">#1574ce</color>
 </resources>

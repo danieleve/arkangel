@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".enojado">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activitys.enojado">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/barra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@color/textColor"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:id="@+id/txtSentimientoSeleccionado"
@@ -16,10 +31,10 @@
         android:gravity="center"
         android:textColor="@color/textColor"
         android:textSize="24dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/barra"/>
 
     <ImageView
-        android:id="@+id/enojado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/txtSentimientoSeleccionado"
@@ -30,7 +45,8 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:gravity="center"
-        android:src="@drawable/enojado" />
+        android:src="@drawable/enojado"
+        android:contentDescription="TODO" />
 
     <LinearLayout
         android:id="@+id/gruporai"
@@ -42,18 +58,16 @@
         android:gravity="center">
 
         <ImageView
-            android:id="@+id/rai_enojado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/raitriste"/>
+            android:src="@drawable/raitriste"
+            android:contentDescription="TODO" />
 
         <TextView
             android:id="@+id/Speech"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/rai_feliz"
             android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/rai_feliz"
             android:background="@drawable/speech_bubble"
             android:lineSpacingExtra="2dp"
             android:maxWidth="150dp"
@@ -67,7 +81,6 @@
     </LinearLayout>
 
     <GridLayout
-        android:id="@+id/GridLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="2"
@@ -82,7 +95,6 @@
             android:id="@+id/btnFamilia"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:layout_below="@+id/raiTriste"
             android:background="#ff9400"
             android:text="FAMILIA"
             android:textColor="@color/textColor"
@@ -95,8 +107,6 @@
             android:id="@+id/btnAmigos"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:layout_below="@+id/raiTriste"
-            android:layout_toRightOf="@+id/btnFamilia"
             android:background="#1fc768"
             android:text="AMIGOS"
             android:textColor="@color/textColor"
@@ -107,8 +117,6 @@
             android:id="@+id/btnEscuela"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:layout_below="@+id/btnFamilia"
-            android:layout_centerVertical="true"
             android:background="#1574ce"
             android:text="ESCUELA"
             android:textColor="@color/textColor"
@@ -119,11 +127,8 @@
             android:id="@+id/btnPareja"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:layout_below="@+id/btnAmigos"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/btnEscuela"
             android:background="#f32732"
-            android:text="novio/a"
+            android:text="Pareja"
             android:textColor="@color/textColor"
             android:textSize="16dp"
             android:textStyle="bold" />

@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.arkangel.arkangel.sicontarform">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.arkangel.arkangel.Activitys.sicontarform">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/barra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@color/textColor"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:id="@+id/txtSentimientoSeleccionado"
@@ -16,10 +31,10 @@
         android:gravity="center"
         android:textColor="@color/textColor"
         android:textSize="24dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/barra"/>
 
     <ImageView
-        android:id="@+id/tristeImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/txtSentimientoSeleccionado"
@@ -30,7 +45,8 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:gravity="center"
-        android:src="@drawable/triste" />
+        android:src="@drawable/triste"
+        android:contentDescription="TODO" />
 
     <LinearLayout
         android:id="@+id/gruporai"
@@ -46,15 +62,14 @@
             android:id="@+id/rai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/raisicontar2"/>
+            android:src="@drawable/raisicontar2"
+            android:contentDescription="TODO" />
 
         <TextView
             android:id="@+id/Speech"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/rai_feliz"
             android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/rai_feliz"
             android:background="@drawable/speech_bubble"
             android:lineSpacingExtra="2dp"
             android:maxWidth="230dp"
@@ -80,7 +95,7 @@
         android:padding="10dip" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnenviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtInput"

@@ -4,7 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.arkangel.arkangel.causas">
+    tools:context="com.arkangel.arkangel.Activitys.causas">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/barra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@color/textColor"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:id="@+id/txtSentimientoSeleccionado"
@@ -16,13 +31,13 @@
         android:gravity="center"
         android:textColor="@color/textColor"
         android:textSize="24dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/barra"/>
 
     <ImageView
-        android:id="@+id/tristeImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/txtSentimientoSeleccionado"
+        android:layout_alignStart="@id/txtSentimientoSeleccionado"
         android:layout_alignTop="@id/txtSentimientoSeleccionado"
         android:layout_alignBottom="@id/txtSentimientoSeleccionado"
         android:layout_marginStart="1dp"
@@ -30,7 +45,8 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:gravity="center"
-        android:src="@drawable/triste" />
+        android:src="@drawable/triste"
+        android:contentDescription="TODO" />
 
     <LinearLayout
         android:id="@+id/gruporai"
@@ -42,32 +58,29 @@
         android:gravity="center">
 
         <ImageView
-            android:id="@+id/rai_triste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/raitriste"/>
+            android:src="@drawable/raitriste"
+            android:contentDescription="TODO" />
 
         <TextView
             android:id="@+id/Speech"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/rai_feliz"
             android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/rai_feliz"
             android:background="@drawable/speech_bubble"
             android:lineSpacingExtra="2dp"
             android:maxWidth="150dp"
-            android:paddingLeft="40dp"
+            android:paddingStart="40dp"
             android:paddingTop="10dp"
-            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
             android:paddingBottom="10dp"
-            android:text="@string/rai_contar_texto"
+            android:text="@string/rai_triste_texto"
             android:textColor="@color/textColor"
             android:textSize="16dp" />
     </LinearLayout>
 
     <GridLayout
-        android:id="@+id/GridLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="2"
@@ -82,21 +95,18 @@
             android:id="@+id/btnFamilia"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:layout_below="@+id/raiTriste"
             android:background="#ff9400"
             android:text="FAMILIA"
             android:textColor="@color/textColor"
             android:textSize="16dp"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginEnd="10dp"/>
 
         <Button
             android:id="@+id/btnAmigos"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:layout_below="@+id/raiTriste"
-            android:layout_toRightOf="@+id/btnFamilia"
             android:background="#1fc768"
             android:text="AMIGOS"
             android:textColor="@color/textColor"
@@ -107,8 +117,6 @@
             android:id="@+id/btnEscuela"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:layout_below="@+id/btnFamilia"
-            android:layout_centerVertical="true"
             android:background="#1574ce"
             android:text="ESCUELA"
             android:textColor="@color/textColor"
@@ -119,9 +127,6 @@
             android:id="@+id/btnPareja"
             android:layout_width="125dp"
             android:layout_height="125dp"
-            android:layout_below="@+id/btnAmigos"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/btnEscuela"
             android:background="#f32732"
             android:text="novio/a"
             android:textColor="@color/textColor"

@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".felizformulario">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activitys.felizformulario">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/barra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@color/textColor"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:id="@+id/emocion"
@@ -16,7 +31,8 @@
         android:gravity="center"
         android:textColor="@color/textColor"
         android:textSize="24dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/barra"/>
 
     <ImageView
         android:id="@+id/feliz"
@@ -30,7 +46,8 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:gravity="center"
-        android:src="@drawable/feliz" />
+        android:src="@drawable/feliz"
+        android:contentDescription="TODO" />
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -50,25 +67,22 @@
                 android:id="@+id/gruporaifeliz"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/emocion"
                 android:background="@android:color/transparent"
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:layout_marginTop="20dp">
 
                 <ImageView
-                    android:id="@+id/rai_feliz"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/raifeliz"/>
+                    android:src="@drawable/raifeliz"
+                    android:contentDescription="TODO" />
 
                 <TextView
                     android:id="@+id/Speech"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/rai_feliz"
                     android:layout_marginBottom="5dp"
-                    android:layout_toRightOf="@+id/rai_feliz"
                     android:background="@drawable/speech_bubble"
                     android:lineSpacingExtra="2dp"
                     android:maxWidth="230dp"
@@ -85,8 +99,6 @@
                     android:id="@+id/edtInput"
                     android:layout_width="300dp"
                     android:layout_height="200dp"
-                    android:layout_below="@+id/raifeliz"
-                    android:layout_centerHorizontal="true"
                     android:background="@drawable/edittext_bg"
                     android:hint="Escribe aquí tu texto...."
                     android:inputType="textCapSentences|textMultiLine"
@@ -95,7 +107,6 @@
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/edtInput"
                         android:background="@android:color/transparent"
                         android:orientation="horizontal"
                         android:paddingLeft="40.0dip"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.arkangel.arkangel.nocontar">
+    tools:context="com.arkangel.arkangel.Activitys.nocontar">
 
     <TextView
         android:id="@+id/txtSentimientoSeleccionado"
@@ -19,7 +19,6 @@
         android:layout_centerHorizontal="true"/>
 
     <ImageView
-        android:id="@+id/tristeImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/txtSentimientoSeleccionado"
@@ -30,10 +29,10 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:gravity="center"
-        android:src="@drawable/triste" />
+        android:src="@drawable/triste"
+        android:contentDescription="TODO" />
 
     <ImageView
-        android:id="@+id/raiSaludoImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rainocontar"
@@ -50,6 +49,7 @@
         app:srcCompat="@drawable/tap"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_margin="30dp"/>
+        android:layout_margin="30dp"
+        android:contentDescription="TODO" />
 
 </RelativeLayout>

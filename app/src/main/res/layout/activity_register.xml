@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".register">
+    tools:context=".Activitys.RegisterActivity">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -20,20 +19,17 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/nerd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="25sp"
-                android:src="@drawable/nerd" />
+                android:src="@drawable/nerd"
+                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/register"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/nerd"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="-30dp"
                 android:background="#ff9400"
                 android:padding="15dp"
@@ -46,8 +42,6 @@
                 android:id="@+id/nombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/register"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
                 android:drawableStart="@drawable/usuario"
@@ -59,16 +53,13 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/gruporai"
                 android:background="@android:color/transparent"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/sexotxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/nombre"
                     android:drawableStart="@drawable/estrella"
                     android:drawablePadding="15dp"
                     android:ems="6"
@@ -79,9 +70,7 @@
                 <Spinner
                     android:id="@+id/spinner"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/sexotxt"
-                    android:layout_toRightOf="@+id/sexotxt" />
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 
@@ -89,8 +78,6 @@
                 android:id="@+id/edad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/sexotxt"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:drawableStart="@drawable/reloj"
                 android:drawablePadding="15dp"
@@ -102,8 +89,6 @@
                 android:id="@+id/correo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/edad"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:drawableStart="@drawable/correo"
                 android:drawablePadding="15dp"
@@ -112,11 +97,9 @@
                 android:inputType="textEmailAddress" />
 
             <EditText
-                android:id="@+id/contraseña"
+                android:id="@+id/contrasena"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/correo"
-                android:layout_centerHorizontal="true"
                 android:drawableStart="@drawable/candado"
                 android:drawablePadding="15dp"
                 android:ems="12"
@@ -124,11 +107,8 @@
                 android:inputType="textPassword" />
 
             <EditText
-                android:id="@+id/contraseñaC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/contraseña"
-                android:layout_centerHorizontal="true"
                 android:drawableStart="@drawable/repetir"
                 android:drawablePadding="15dp"
                 android:ems="12"
@@ -139,12 +119,11 @@
                 android:id="@+id/siguiente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/contraseñaC"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="25sp"
                 android:background="#ff9400"
                 android:text="Siguiente"
                 android:textColor="@color/textColor" />
+
         </LinearLayout>
 
     </ScrollView>

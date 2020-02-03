@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".nervioso">
+    tools:context=".Activitys.nervioso">
 
     <TextView
         android:id="@+id/emocion"
@@ -19,7 +19,6 @@
         android:layout_centerHorizontal="true"/>
 
     <ImageView
-        android:id="@+id/nervioso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/emocion"
@@ -30,16 +29,17 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:gravity="center"
-        android:src="@drawable/nervioso" />
+        android:src="@drawable/nervioso"
+        android:contentDescription="TODO" />
 
     <ImageView
-        android:id="@+id/raiemergencia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rainervioso"
         android:layout_below="@id/emocion"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25sp"/>
+        android:layout_marginTop="25sp"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/tap"
@@ -48,6 +48,7 @@
         app:srcCompat="@drawable/tap"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_margin="30dp"/>
+        android:layout_margin="30dp"
+        android:contentDescription="TODO" />
 
 </RelativeLayout>

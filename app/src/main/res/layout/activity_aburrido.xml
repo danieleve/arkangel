@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".aburrido">
+    tools:context=".Activitys.AburridoActivity">
 
     <TextView
         android:id="@+id/emocion"
@@ -19,10 +19,9 @@
         android:layout_centerHorizontal="true"/>
 
     <ImageView
-        android:id="@+id/aburrido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/emocion"
+        android:layout_alignStart="@id/emocion"
         android:layout_alignTop="@id/emocion"
         android:layout_alignBottom="@id/emocion"
         android:layout_marginStart="1dp"
@@ -30,16 +29,17 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:gravity="center"
-        android:src="@drawable/aburrido" />
+        android:src="@drawable/aburrido"
+        android:contentDescription="@string/todo" />
 
     <ImageView
-        android:id="@+id/raiaburrido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/raiaburrido"
         android:layout_below="@id/emocion"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25sp"/>
+        android:layout_marginTop="25sp"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/tap"
@@ -47,7 +47,8 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/tap"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_margin="30dp"/>
+        android:layout_alignParentStart="true"
+        android:layout_margin="30dp"
+        android:contentDescription="TODO" />
 
 </RelativeLayout>

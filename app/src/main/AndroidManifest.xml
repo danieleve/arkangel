@@ -3,85 +3,137 @@
     package="com.arkangel.arkangel">
 
     <uses-permission android:name="android.permision.CALL_PHONE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".codigo"
+        <activity android:name=".tutorial"
             android:configChanges="orientation"
-            android:screenOrientation="portrait" ></activity>
+            android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".persona_favorita"
-            android:configChanges="orientation"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".felizformulario"
+            android:name=".Activitys.MainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".enojado"
+            android:name=".Activitys.ResultadoTest"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".feliz"
+            android:name=".Activitys.NoContarEnojado"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".aburrido"
+            android:name=".Activitys.SiContarEnojado"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".nervioso"
+            android:name=".Activitys.contarEnojado"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".emergencia"
+            android:name=".Activitys.notificationSelected"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".actividad"
+            android:name=".Activitys.Notifications"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".tutor"
+            android:name=".Activitys.personajeSelect"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".register"
+            android:name=".Activitys.modalPersonaje"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".login"
+            android:name=".Activitys.activity_pregunta"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".sicontarform"
+            android:name=".Activitys.test_personalidad"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".nocontar"
+            android:name=".Activitys.options_user"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".contar"
+            android:name=".Activitys.codigo"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".causas"
+            android:name=".Activitys.persona_favorita"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".sentimientos"
+            android:name=".Activitys.felizformulario"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activitys.enojado"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.feliz"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.AburridoActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.nervioso"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.emergencia"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.actividad"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.tutor"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.RegisterActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.login"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.sicontarform"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.nocontar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.contar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.causas"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.sentimientos"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activitys.Portada"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>

@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feliz">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activitys.feliz">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/barra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@color/textColor"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:id="@+id/emocion"
@@ -16,7 +31,8 @@
         android:gravity="center"
         android:textColor="@color/textColor"
         android:textSize="24dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/barra"/>
 
     <ImageView
         android:id="@+id/feliz"
@@ -30,7 +46,8 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:gravity="center"
-        android:src="@drawable/feliz" />
+        android:src="@drawable/feliz"
+        android:contentDescription="TODO" />
 
     <LinearLayout
         android:id="@+id/gruporaifeliz"
@@ -42,32 +59,29 @@
         android:gravity="center">
 
     <ImageView
-        android:id="@+id/rai_feliz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/raifeliz"/>
+        android:src="@drawable/raifeliz"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/Speech"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/rai_feliz"
         android:layout_marginBottom="5dp"
-        android:layout_toRightOf="@+id/rai_feliz"
         android:background="@drawable/speech_bubble"
         android:lineSpacingExtra="2dp"
-        android:maxWidth="150dp"
+        android:maxWidth="200dp"
         android:paddingLeft="40dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:text="@string/rai_contar_texto"
+        android:text="@string/rai_feliz_texto"
         android:textColor="@color/textColor"
         android:textSize="16dp" />
     </LinearLayout>
 
     <GridLayout
-        android:id="@+id/GridLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="2"

@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".emergencia">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activitys.emergencia">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/barra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@color/textColor"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:id="@+id/emocion"
@@ -16,10 +31,10 @@
         android:gravity="center"
         android:textColor="@color/textColor"
         android:textSize="24dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/barra"/>
 
     <ImageView
-        android:id="@+id/tristeImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/emocion"
@@ -30,7 +45,8 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
         android:gravity="center"
-        android:src="@drawable/emergencia" />
+        android:src="@drawable/emergencia"
+        android:contentDescription="TODO" />
 
     <LinearLayout
         android:id="@+id/gruporai"
@@ -42,18 +58,16 @@
         android:gravity="center">
 
         <ImageView
-            android:id="@+id/rai_feliz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/raiemergencia"/>
+            android:src="@drawable/raiemergencia"
+            android:contentDescription="TODO" />
 
         <TextView
             android:id="@+id/Speech"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/rai_feliz"
             android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/rai_feliz"
             android:background="@drawable/speech_bubble"
             android:lineSpacingExtra="2dp"
             android:maxWidth="180dp"
@@ -73,7 +87,17 @@
         android:src="@drawable/phone"
         android:layout_below="@id/gruporai"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="40dp"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Dispositivo no inclinado"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/llamar"/>
 
 
 </RelativeLayout>
